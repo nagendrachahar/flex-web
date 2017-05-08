@@ -1,0 +1,271 @@
+*{
+    padding: 0;
+    margin: 0;
+	box-sizing: border-box;
+}
+body{
+	height: 850px;
+}
+.main-container{
+	width: 100%;
+	height: 630px;
+	position: fixed;
+	top: 0;
+	transition: top 0.7s ease-in;
+	.main-yellow,.main-red{
+		float: left;
+		position: absolute;
+
+		width: 50%;
+		height: 100%;
+		transition: left 0.5s linear;
+	}
+	.main-yellow{
+		background-color: yellow;
+		opacity: 0.8;
+		left:50%;
+		
+	}
+	.main-red{
+		background-color: red;
+	}
+	.image-container{
+	    width: 100%;
+		position: absolute;
+		top: 100px;
+		text-align: center;
+		transition: top 0.5s linear;
+	}
+	.profile-pic{
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+	}
+	.name,.profession{
+		font-family: 'Caveat Brush', cursive;
+		color: black;
+	}
+	.name{
+		font-size: 70px;
+	}
+	.profession{
+		font-size: 30px;
+	}
+	.portfolio{
+		padding: 192px 50px;
+		width: 100%;
+		height: 630px;
+		background-color: black;
+		color: white;
+		font-family: 'Caveat Brush', cursive;
+		text-align: center;
+		transform: scale(0,0);
+		transition: transform 0.5s linear;
+
+		h1{
+			font-size: 100px;
+			text-transform: uppercase;
+		}
+		p{  
+			font-size: 30px;
+			text-transform: uppercase;
+		}
+	}
+
+	.work{
+		width: 100%;
+		height: 630px;
+		background: url(../image/webdesign-services.jpg) no-repeat;
+		 background-size: 100% 100%;
+		transition: transform 1s;
+		text-align: center;
+		h1{ 
+		    font-family: 'Poiret One', cursive;
+			font-size: 40px;
+			text-transform: uppercase;
+			padding: 50px 30px 10px;
+		}
+		.project-container{
+			 max-width: 650px;
+			 margin: 20px auto;
+
+			.project{
+				margin: 10px;
+				display: inline-block;
+				max-width: 300px;
+				max-height: 220px;
+				overflow: hidden;
+				border: 1px solid black;
+				outline: 5px solid white;
+				transform: translate(0,400px);
+				transition: transform 1s linear;
+				text-decoration: none;
+				img{
+					width: 100%;
+					height: auto;
+					transition: transform 0.2s;
+					float:left;
+				}
+				
+				p{  
+					background-color: black;
+					width: 100%;
+					color: white;
+					padding: 5px;
+					float: left;
+					font-family: arial;
+
+				}
+			}
+			.project:hover img{
+					transform: scale(1.2,1.7);
+					
+			}
+
+			
+		}
+	}
+	.contact{
+		font-family: 'Poiret One', cursive;
+		text-transform: uppercase;
+		width: 100%;
+		height: 630px;
+		background: rgb(47,79,79);
+		transition: transform 1s;
+		text-align: center;
+		padding: 30px;
+		color: white;
+		h1{ 
+			padding: 20px;
+			font-size: 50px;
+			
+		}
+		p{
+			font-size: 20px;
+			padding: 20px;
+			a{
+				display: inline-block;
+				width: 80px;
+				height: 80px;
+				text-indent: -99999px;
+				margin: 30px;
+				border-radius: 40px;
+			}
+			.fb{
+                
+				
+				background: url(../image/facebook-icon-preview.png) no-repeat -11px -12px;
+				background-size: 100px 100px;
+				
+			}
+			.google{
+				background: url(../image/google+.png) no-repeat 0px 0px;
+				background-size: 80px 80px;
+	
+			}
+			.linkedin{
+                
+				background: url(../image/linkedin.png) no-repeat -10px -10px;
+				background-size: 100px 100px;
+				
+			}
+		}
+
+	}
+	@media screen and (max-width: 660px){
+		.work{
+			.project-container{
+				.project{
+					width: 250px;
+					height: 189px;
+				}
+			}
+		}
+		.portfolio{
+			padding: 150px 50px;
+		}
+	}
+	@media screen and (max-width: 550px){
+		.work{
+			.project-container{
+				.project{
+					width: 200px;
+					height: 155px;
+				}
+			}
+		}
+		.portfolio{
+			padding: 100px 50px;
+			h1{
+				font-size: 70px;
+			}
+		}
+	}
+	@media screen and (max-width: 500px){
+		.work{
+			.project-container{
+				.project{
+					width: 170px;
+					height: 133px;
+				}
+			}
+		}
+		.portfolio{
+			padding: 50px 30px;
+			p{
+				font-size: 25px;
+			}
+		}
+	}
+	@media screen and (max-width: 420px){
+		.work{
+			h1{ 
+				padding: 10px;
+			}
+			.project-container{
+				margin: 10px auto;
+				.project{
+					margin: 5px;
+					width: 150px;
+					height: 122px;
+				}
+			}
+		}
+		.portfolio{
+			padding: 30px 20px;
+			p{
+				font-size: 20px;
+			}
+		}
+	}
+	@media screen and (max-width: 380px){
+		.image-container{
+			.name{
+				font-size: 50px;
+			}
+		}
+		.portfolio{
+			h1{
+				font-size: 50px;
+			}
+			p{
+				font-size: 20px;
+			}
+		}
+		
+	}
+	@media screen and (max-width: 325px){
+		
+		.work{
+			
+			.project-container{
+				margin: 10px auto;
+				.project{
+					margin: 5px;
+					width: 150px;
+					height: 90px;
+				}
+			}
+		}
+	}
+}
